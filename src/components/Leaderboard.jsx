@@ -18,6 +18,7 @@ const Leaderboard = ({ players, playerScore }) => {
     });
     scoresMap.sort((a, b) => b.score - a.score);
     setLeader(scoresMap);
+    console.log(scoresMap)
   }, [leader, players, playerScore]);
   return (
     <div className="w-max  px-4 md:px-8">
@@ -49,7 +50,7 @@ const Leaderboard = ({ players, playerScore }) => {
                         {ind + 1}{" "}
                       </td>
                       <td
-                        key={item.score + "" + ind}
+                        key={item.name + "" + ind}
                         className="px-6 py-4 whitespace-nowrap"
                       >
                         {item.name}
