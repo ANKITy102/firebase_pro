@@ -114,7 +114,7 @@ const EditPlayer = ({editPlayer, setEditPlayer, players, setPlayers, items,selec
                             onChange={handleChange}
                             value={playerData.value[item.id]}
                             type="number"
-                            max={1000}
+                            max={9}
                             min={0}
                             required
                             name={item.id}
