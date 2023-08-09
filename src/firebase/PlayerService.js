@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore"
 import { db } from "./firebase";
 const playerRef = await collection(db, "Players");
 
@@ -28,6 +28,17 @@ export const deletePlayer = async (id) => {
     try {
         const playerDoc = doc(db, "Players", id);
         await deleteDoc(playerDoc)
+    } catch (error) {
+        alert("some error occured");
+    }
+}
+
+export const updateItem = async (playerData, id) => {
+
+    try {
+        const playerDoc = doc(db, "Players", id);
+        const updatedPlayer = await updateDoc(playerDoc, playerData);
+        return updatedPlayer;
     } catch (error) {
         alert("some error occured");
     }
