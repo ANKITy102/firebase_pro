@@ -67,7 +67,7 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                 </div>
                 <div>
                   <label htmlFor="item_weight" className="font-medium">
-                  Peso 
+                  Peso {"(1-5)"} 
                   </label>
                   <input
                     id="item_weight"

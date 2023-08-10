@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { deleteItem } from "../firebase/ItemService";
+import React, { useEffect } from "react";
+
 import { deletePlayer } from "../firebase/PlayerService";
 
 const Tablecomp = ({
@@ -14,20 +14,13 @@ const Tablecomp = ({
   setPlayerScore,
   playerScore
 }) => {
-  const handleDelete = async (id) => {
-    await deleteItem(id);
-    const filteredArray = items.filter((i) => i.id !== id);
-    setItems(filteredArray);
-  };
+ 
   const handleplayerdelete = async (id) => {
     await deletePlayer(id);
     const filteredArray = players.filter((i) => i.id !== id);
     setPlayers(filteredArray);
   };
-  const handleEdit = async (item) => {
-    setEdit(true);
-    setSelectItem(item);
-  };
+ 
   const handlePlayerEdit = async (player) => {
     setEditPlayer(true);
     setSelectPlayer(player);
@@ -49,6 +42,7 @@ const Tablecomp = ({
       console.log(score);
     });
     setPlayerScore(vec);
+    // eslint-disable-next-line
   }, [items, players]);
   return (
     <div className="max-w-full px-2 sm:px-4 md:px-8">

@@ -20,13 +20,13 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem, 
       <div className="flex items-center min-h-screen px-4 py-8">
         <div className="relative w-full max-w-lg mx-auto bg-white rounded-md shadow-lg">
           <div className="flex items-center justify-between p-4 border-b">
-            <h4 className="text-lg font-medium text-gray-800">Edit Item</h4>
-            <div className="flex gap-x-4 items-center"><button
+              <button
             onClick={() => setAddopen(true)}
             className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-700 rounded-md shadow block lg:inline"
           >
             Añadir Item
           </button>
+            <div className="flex gap-x-4 items-center">
             <button
               className="p-2 text-gray-400 rounded-md hover:bg-gray-100"
               onClick={() => setEditdelItem(false)}
