@@ -68,6 +68,7 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                 <div>
                   <label htmlFor="item_weight" className="font-medium">
                   Peso {"(1-5)"} 
+                  {/* added limits */}
                   </label>
                   <input
                     id="item_weight"
