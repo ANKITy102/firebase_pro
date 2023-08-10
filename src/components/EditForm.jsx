@@ -74,6 +74,8 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                     type="number"
                     required
                     name="weight"
+                    min={1}
+                    max={5}
                     onChange={onChangeHandler}
                     value={itemData.weight}
                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-400 shadow-sm rounded-lg"
@@ -82,12 +84,12 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                 <div className="flex items-center gap-3 p-4 mt-5">
                   <button
                     type="submit"
-                    className="px-6 py-2 text-white bg-orange-400 rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
+                    className="px-6 py-2 text-white bg-red-600 hover:bg-red-700 rounded-md outline-none ring-offset-2 ring-red-500 focus:ring-2"
                   >
                     {buttonName}
                   </button>
                   <button
-                    className="px-6 py-2 text-gray-800 border rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
+                    className="px-6 py-2 text-gray-800 border hover:bg-slate-300 rounded-md outline-none ring-offset-2 ring-red-500 focus:ring-2"
                     onClick={() => {
                       setEdit(false);
                     }}

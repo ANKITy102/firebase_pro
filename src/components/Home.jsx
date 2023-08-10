@@ -51,16 +51,11 @@ const Home = () => {
         {showList && <div className=" absolute left-0 right-0 gap-y-4 border-2 bg-white mt-4 z-30 mx-8 p-4 rounded-sm flex flex-col justify-center items-center">
           <button
             onClick={() => setEditdelItem(true)}
-            className="py-2 px-3 text-center w-full text-white bg-red-500 hover:bg-red-700 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center w-full text-white bg-red-600 hover:bg-red-700 rounded-md shadow block lg:inline"
           >
             Items
           </button>
-          <button
-            onClick={() => setAddopen(true)}
-            className="py-2 px-3 text-center w-full text-white bg-red-500 hover:bg-red-600 rounded-md shadow block lg:inline"
-          >
-            Añadir Item
-          </button>
+        
           <button
             onClick={() => {
               setAddPlayer(true);
@@ -79,17 +74,12 @@ const Home = () => {
           >
             Items
           </button>
-          <button
-            onClick={() => setAddopen(true)}
-            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
-          >
-            Añadir Item
-          </button>
+        
           <button
             onClick={() => {
               setAddPlayer(true);
             }}
-            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-700 rounded-md shadow block lg:inline"
           >
             Jugadores
           </button>

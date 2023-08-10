@@ -67,7 +67,7 @@ const Tablecomp = ({
                         onClick={() => {
                           handleplayerdelete(item.id);
                         }}
-                        className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-500 duration-150 hover:bg-gray-50 rounded-lg"
+                        className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-700 duration-150 hover:bg-gray-50 rounded-lg"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

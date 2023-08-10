@@ -23,7 +23,7 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem, 
             <h4 className="text-lg font-medium text-gray-800">Edit Item</h4>
             <div className="flex gap-x-4 items-center"><button
             onClick={() => setAddopen(true)}
-            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-700 rounded-md shadow block lg:inline"
           >
             Añadir Item
           </button>
@@ -85,7 +85,7 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem, 
                               onClick={() => {
                                 handleDelete(item.id);
                               }}
-                              className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-500 duration-150 hover:bg-gray-50 rounded-lg"
+                              className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-700 duration-150 hover:bg-gray-50 rounded-lg"
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"

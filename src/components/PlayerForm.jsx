@@ -100,7 +100,7 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
 
                     <div className="flex items-center gap-3 p-4 mt-5">
                       <button
-                        className="px-6 py-2 text-white bg-orange-400 rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
+                        className="px-6 py-2 text-white bg-red-600 hover:bg-red-700 rounded-md outline-none ring-offset-2 ring-red-500 focus:ring-2"
                         onClick={() => {
                           setAddPlayer(true);
                         }}
@@ -108,7 +108,7 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
                         Añadir
                       </button>
                       <button
-                        className="px-6 py-2 text-gray-800 border rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
+                        className="px-6 py-2 text-gray-800 border hover:bg-slate-300 rounded-md outline-none ring-offset-2 ring-red-500 focus:ring-2"
                         onClick={() => {
                           setAddPlayer(false);
                         }}
