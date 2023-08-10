@@ -8,7 +8,7 @@ import { getAllPlayers } from "../firebase/PlayerService";
 import EditPlayer from "./EditPlayer";
 import Editdelitems from "./Editdelitems";
 import Leaderboard from "./Leaderboard";
-
+import logo from "../assets/logo-share.png"
 const Home = () => {
   const [addopen, setAddopen] = useState(false);
   const [items, setItems] = useState([]);
@@ -35,39 +35,73 @@ const Home = () => {
     getItems();
     getplayers();
   }, []);
+  const [showList, setShowList] = useState(false);
   return (
-    <section className="p-8">
-      <nav className="flex justify-between">
-        <div>logo</div>
-        <div className="flex gap-x-4">
+    <section className="px-2 sm:px-8 py-3">
+      <nav className="flex justify-between items-center border-b-2 border-zinc-500">
+        <div className="w-1/3">
+          <img src={logo} className="w-32" />
+        </div>
+        <div className="min-[800px]:hidden block">
+        <svg onClick={()=>{setShowList(prev=> !prev)}} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff350c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+
+
+        {showList && <div className=" absolute left-0 right-0 gap-y-4 border-2 bg-white mt-4 z-30 mx-8 p-4 rounded-sm flex flex-col justify-center items-center">
           <button
             onClick={() => setEditdelItem(true)}
-            className="py-2 px-3 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center w-full text-white bg-red-500 hover:bg-red-700 rounded-md shadow block lg:inline"
           >
-            Edit Item
+            Items
           </button>
           <button
             onClick={() => setAddopen(true)}
-            className="py-2 px-3 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center w-full text-white bg-red-500 hover:bg-red-600 rounded-md shadow block lg:inline"
           >
-            Add Item
+            Añadir Item
           </button>
           <button
             onClick={() => {
               setAddPlayer(true);
             }}
-            className="py-2 px-3 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block lg:inline"
+            className="py-2 px-3 text-center w-full text-white bg-red-500 hover:bg-red-600 rounded-md shadow block lg:inline"
           >
-            Add Player
+            Jugadores
+          </button>
+        </div>}
+        </div>
+       
+        <div className="hidden min-[800px]:flex  gap-x-4 w-1/3 justify-end">
+          <button
+            onClick={() => setEditdelItem(true)}
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-700 rounded-md shadow block lg:inline"
+          >
+            Items
+          </button>
+          <button
+            onClick={() => setAddopen(true)}
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
+          >
+            Añadir Item
+          </button>
+          <button
+            onClick={() => {
+              setAddPlayer(true);
+            }}
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
+          >
+            Jugadores
           </button>
         </div>
       </nav>
+      <div className=" text-xl text-center p-4 flex items-center justify-center" style={{
+          fontFamily:"Roboto"
+        }} >Dirección Deportiva - TFM4</div>
       {addopen && (
         <ItemForm
           setItems={setItems}
           addopen={addopen}
           setAddopen={setAddopen}
-          buttonName="Add Item"
+          buttonName="Añadir Item"
         />
       )}
       {addPlayer && (
@@ -83,7 +117,7 @@ const Home = () => {
           setItems={setItems}
           setEdit={setEdit}
           editmode={editmode}
-          buttonName="Edit Item"
+          buttonName="Aceptar"
           selectItem={selectItem}
         />
       )}
@@ -104,9 +138,10 @@ const Home = () => {
           setItems={setItems}
           setEdit={setEdit}
           setSelectItem={setSelectItem}
+          setAddopen={setAddopen}
         />
       )}
-      <div className="px-3">
+      <div>
         <Tablecomp
           items={items}
           setItems={setItems}

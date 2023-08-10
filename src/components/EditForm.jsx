@@ -29,7 +29,7 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
       <div className="flex items-center min-h-screen px-4 py-8">
         <div className="relative w-full max-w-lg mx-auto bg-white rounded-md shadow-lg">
           <div className="flex items-center justify-between p-4 border-b">
-            <h4 className="text-lg font-medium text-gray-800">Edit Item</h4>
+            <h4 className="text-lg font-medium text-gray-800">Aceptar</h4>
             <button
               className="p-2 text-gray-400 rounded-md hover:bg-gray-100"
               onClick={() => setEdit(false)}
@@ -67,7 +67,7 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                 </div>
                 <div>
                   <label htmlFor="item_weight" className="font-medium">
-                    Item Weight
+                  Peso 
                   </label>
                   <input
                     id="item_weight"
@@ -92,7 +92,7 @@ const EditForm = ({ setItems, setEdit, editmode, buttonName, selectItem }) => {
                       setEdit(false);
                     }}
                   >
-                    Cancel
+                    Cancelar
                   </button>
                 </div>
               </form>

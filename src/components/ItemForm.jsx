@@ -3,7 +3,7 @@ const ItemForm = ({ addopen, setAddopen, setItems, buttonName }) => {
   return (
     <>
       {addopen ? (
-        <div className="fixed inset-0 z-10 overflow-y-auto">
+        <div className="fixed inset-0 z-20 overflow-y-auto">
           <div
             className="fixed inset-0 w-full h-full bg-black opacity-40"
             onClick={() => setAddopen(false)}
@@ -12,7 +12,8 @@ const ItemForm = ({ addopen, setAddopen, setItems, buttonName }) => {
             <div className="relative w-full max-w-lg mx-auto bg-white rounded-md shadow-lg">
               <div className="flex items-center justify-between p-4 border-b">
                 <h4 className="text-lg font-medium text-gray-800">
-                  Add a New Item
+                Añadir nuevo Item
+
                 </h4>
                 <button
                   className="p-2 text-gray-400 rounded-md hover:bg-gray-100"

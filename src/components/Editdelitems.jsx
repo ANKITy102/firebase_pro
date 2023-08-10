@@ -1,7 +1,7 @@
 import React from "react";
 import { deleteItem } from "../firebase/ItemService";
 
-const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem }) => {
+const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem, setAddopen }) => {
   const handleDelete = async (id) => {
     await deleteItem(id);
     const filteredArray = items.filter((i) => i.id !== id);
@@ -21,6 +21,12 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem }
         <div className="relative w-full max-w-lg mx-auto bg-white rounded-md shadow-lg">
           <div className="flex items-center justify-between p-4 border-b">
             <h4 className="text-lg font-medium text-gray-800">Edit Item</h4>
+            <div className="flex gap-x-4 items-center"><button
+            onClick={() => setAddopen(true)}
+            className="py-2 px-3 text-center text-white bg-red-600 hover:bg-red-600 rounded-md shadow block lg:inline"
+          >
+            Añadir Item
+          </button>
             <button
               className="p-2 text-gray-400 rounded-md hover:bg-gray-100"
               onClick={() => setEditdelItem(false)}
@@ -38,10 +44,11 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem }
                 />
               </svg>
             </button>
+            </div>
           </div>
-          <div className="w-max  px-4 md:px-8">
-            <div className="mt-12 mb-12 shadow-sm border px-auto rounded-lg overflow-x-auto">
-              <table className="w-full table-auto  text-sm text-left">
+          <div className="w-full mx-auto  px-4 md:px-8">
+            <div className="mt-12  mb-12 shadow-sm border px-auto rounded-lg overflow-x-auto">
+              <table className="w-full mx-auto table-auto  text-sm text-left">
                 <thead className="bg-gray-50 text-gray-600 font-medium border-b">
                   <tr>
                     <th className="py-3 px-6"></th>

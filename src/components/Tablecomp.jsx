@@ -49,9 +49,9 @@ const Tablecomp = ({
       console.log(score);
     });
     setPlayerScore(vec);
-  }, [items, setItems, players]);
+  }, [items, players]);
   return (
-    <div className="w-max  px-4 md:px-8">
+    <div className="max-w-full px-2 sm:px-4 md:px-8">
       <div className="mt-12 shadow-sm border px-auto rounded-lg overflow-x-auto">
         <table className="w-full table-auto  text-sm text-left">
           <thead className="bg-gray-50 text-gray-600 font-medium border-b">

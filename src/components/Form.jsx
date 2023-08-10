@@ -46,13 +46,15 @@ const Form = ({ setAddopen, setItems, buttonName }) => {
           </div>
           <div>
             <label htmlFor="item_weight" className="font-medium">
-              Item Weight
+            Peso 
             </label>
             <input
               id="item_weight"
               type="number"
               required
               name="weight"
+              min={1}
+              max={5}
               onChange={onChangeHandler}
               value={itemData.weight}
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-400 shadow-sm rounded-lg"
@@ -73,7 +75,7 @@ const Form = ({ setAddopen, setItems, buttonName }) => {
                 setAddopen(false);
               }}
             >
-              Cancel
+              Cancelar
             </button>
           </div>
         </form>

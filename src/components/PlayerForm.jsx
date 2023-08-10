@@ -36,7 +36,7 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
             <div className="relative w-full max-w-lg mx-auto bg-white rounded-md shadow-lg">
               <div className="flex items-center justify-between p-4 border-b">
                 <h4 className="text-lg font-medium text-gray-800">
-                  Add a New Player
+                Añadir nuevo jugador
                 </h4>
                 <button
                   className="p-2 text-gray-400 rounded-md hover:bg-gray-100"
@@ -58,10 +58,10 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
               </div>
               <main className="w-full h-full flex flex-col items-center justify-center px-4">
                 <div className="max-w-sm w-full text-gray-600">
-                  <form className="mt-8 space-y-5" onSubmit={onSubmitHandler}>
+                  <form className="mt-8  space-y-5" onSubmit={onSubmitHandler}>
                     <div>
                       <label htmlFor="player_name" className="font-medium">
-                        Player Name
+                      Nombre
                       </label>
                       <input
                         id="player_name"
@@ -72,13 +72,15 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-400 shadow-sm rounded-lg"
                       />
                     </div>
+                    <div className="h-[300px] overflow-y-auto ">
+
                     {items.length > 0 &&
                       items.map((item, idx) => (
                         <div
                           key={idx}
-                          className="max-h-[300px] flex items-center gap-x-4"
+                          className="flex items-center gap-x-8"
                         >
-                          <label htmlFor={item.id} className="font-medium">
+                          <label htmlFor={item.id} className="w-full font-medium">
                             {item.name}
                           </label>
                           <input
@@ -87,13 +89,15 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
                             value={playerData.value[item.id]}
                             type="number"
                             max={9}
-                            min={0}
+                            min={1}
                             required
                             name={item.id}
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-400 shadow-sm rounded-lg"
                           />
                         </div>
                       ))}
+                    </div>
+
                     <div className="flex items-center gap-3 p-4 mt-5">
                       <button
                         className="px-6 py-2 text-white bg-orange-400 rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
@@ -101,7 +105,7 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
                           setAddPlayer(true);
                         }}
                       >
-                        Add Player
+                        Añadir
                       </button>
                       <button
                         className="px-6 py-2 text-gray-800 border rounded-md outline-none ring-offset-2 ring-orange-400 focus:ring-2"
@@ -109,7 +113,7 @@ const PlayerForm = ({ addPlayer, setAddPlayer, items ,setPlayers}) => {
                           setAddPlayer(false);
                         }}
                       >
-                        Cancel
+                        Cancelar
                       </button>
                     </div>
                   </form>

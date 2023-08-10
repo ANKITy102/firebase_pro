@@ -88,7 +88,7 @@ const EditPlayer = ({editPlayer, setEditPlayer, players, setPlayers, items,selec
                   <form className="mt-8 space-y-5" onSubmit={onSubmitHandler}>
                     <div>
                       <label htmlFor="player_name" className="font-medium">
-                        Player Name
+                      Nombre
                       </label>
                       <input
                         id="player_name"
@@ -115,7 +115,7 @@ const EditPlayer = ({editPlayer, setEditPlayer, players, setPlayers, items,selec
                             value={playerData.value[item.id]}
                             type="number"
                             max={9}
-                            min={0}
+                            min={1}
                             required
                             name={item.id}
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-400 shadow-sm rounded-lg"
@@ -137,7 +137,7 @@ const EditPlayer = ({editPlayer, setEditPlayer, players, setPlayers, items,selec
                           setEditPlayer(false);
                         }}
                       >
-                        Cancel
+                        Cancelar
                       </button>
                     </div>
                   </form>
