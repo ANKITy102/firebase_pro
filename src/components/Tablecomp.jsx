@@ -78,6 +78,7 @@ const Tablecomp = ({
                           stroke="#ff0c0c"
                           stroke-width="2"
                           stroke-linecap="round"
+  
                           stroke-linejoin="round"
                         >
                           <polyline points="3 6 5 6 21 6"></polyline>
