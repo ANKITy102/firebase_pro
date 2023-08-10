@@ -9,6 +9,7 @@ import EditPlayer from "./EditPlayer";
 import Editdelitems from "./Editdelitems";
 import Leaderboard from "./Leaderboard";
 import logo from "../assets/logo-share.png"
+import logo2 from "../assets/LaLiga logo.png"
 const Home = () => {
   const [addopen, setAddopen] = useState(false);
   const [items, setItems] = useState([]);
@@ -39,7 +40,8 @@ const Home = () => {
   return (
     <section className="px-2 sm:px-8 py-3">
       <nav className="flex justify-between items-center border-b-2 border-zinc-500">
-        <div className="w-1/3">
+        <div className="w-1/3 flex gap-x-4 items-center">
+          <img src={logo2} className="w-16" />
           <img src={logo} className="w-32" />
         </div>
         <div className="min-[800px]:hidden block">

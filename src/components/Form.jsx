@@ -32,7 +32,7 @@ const Form = ({ setAddopen, setItems, buttonName }) => {
         <form onSubmit={onSubmitHandler} className="mt-8 space-y-5">
           <div>
             <label htmlFor="item_name" className="font-medium">
-              Item Name
+            Item
             </label>
             <input
               id="item_name"

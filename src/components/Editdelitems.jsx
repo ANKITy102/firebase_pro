@@ -53,7 +53,7 @@ const Editdelitems = ({ items,setEditdelItem, setItems, setEdit, setSelectItem, 
                   <tr>
                     <th className="py-3 px-6"></th>
 
-                    <th className="py-3 px-6">Item Name</th>
+                    <th className="py-3 px-6">Item</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 divide-y">

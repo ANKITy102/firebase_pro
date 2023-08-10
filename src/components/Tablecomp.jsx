@@ -56,7 +56,8 @@ const Tablecomp = ({
         <table className="w-full table-auto  text-sm text-left">
           <thead className="bg-gray-50 text-gray-600 font-medium border-b">
             <tr>
-              <th className="py-3 px-6">Item Name</th>
+              <th className="py-3 px-6">Item
+</th>
               {players.length > 0 &&
                 players.map((item, idx) => {
                   return (
